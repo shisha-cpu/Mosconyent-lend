@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности | МОСКОНТЕНТ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --red: #ff2e2e;
+            --yellow: #ffd900;
+            --gray: #2a2a2a;
+            --light-gray: #444444;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Brutalism styles */
+        .brutal-border {
+            border: 3px solid var(--white);
+            box-shadow: 8px 8px 0px var(--red);
+        }
+
+        /* Header */
+        header {
+            padding: 15px 0;
+            background: var(--black);
+            border-bottom: 3px solid var(--white);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--red);
+            letter-spacing: 3px;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            color: var(--white);
+            display: block;
+            letter-spacing: 8px;
+            margin-top: -5px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            padding: 8px 15px;
+            background: var(--gray);
+            border: 2px solid var(--white);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: var(--red);
+            transform: skew(-10deg);
+        }
+
+        /* Main Content */
+        .privacy-page {
+            padding: 80px 0;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: var(--yellow);
+            text-shadow: 3px 3px 0px var(--red);
+            border-bottom: 3px solid var(--red);
+            padding-bottom: 15px;
+        }
+
+        .last-updated {
+            background: var(--gray);
+            padding: 15px;
+            border: 2px solid var(--white);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--yellow);
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid var(--red);
+        }
+
+        .section-content {
+            background: var(--gray);
+            padding: 25px;
+            border: 2px solid var(--light-gray);
+        }
+
+        .section-content p {
+            margin-bottom: 15px;
+        }
+
+        .section-content ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .section-content li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .section-content li:before {
+            content: "■";
+            color: var(--red);
+            position: absolute;
+            left: -20px;
+        }
+
+        .highlight {
+            background: var(--black);
+            padding: 20px;
+            border: 2px solid var(--yellow);
+            margin: 20px 0;
+            font-weight: 700;
+        }
+
+        .contact-block {
+            background: var(--gray);
+            padding: 30px;
+            border: 3px solid var(--red);
+            margin-top: 40px;
+        }
+
+        .contact-block h3 {
+            color: var(--yellow);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Back to main */
+        .back-to-main {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 3px solid var(--white);
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--black);
+            transform: skew(-10deg) scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gray);
+            padding: 40px 0 20px;
+            border-top: 5px solid var(--yellow);
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--yellow);
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 0;
+        }
+
+        .requisites {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 3px solid var(--red);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 12px;
+            }
+            
+            .section-content {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    Москонтент
+                    <span class="logo-sub">SMM Agency</span>
+                </div>
+                <nav>
+                    <a href="index.html">На главную</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="privacy-page">
+        <div class="container">
+            <h1 class="page-title">Политика конфиденциальности</h1>
+            
+            <div class="last-updated">
+                <strong>Дата последнего обновления:</strong> 20 декабря 2023 года
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">1. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
+                <div class="section-content">
+                    <p>Индивидуальный предприниматель Гузь Илона Артуровна (ИНН 027320062837), далее именуемый «Оператор», настоящим информирует Вас о своей политике конфиденциальности относительно обработки персональных данных, которые могут быть собраны через сайт moscontent.ru (далее — «Сайт»).</p>
+                    <p>Оператор стремится защищать конфиденциальность персональных данных клиентов и посетителей Сайта. Соблюдение конфиденциальности является важным для нас, поскольку целью обработки персональных данных является защита прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">2. ОСНОВНЫЕ ПОНЯТИЯ</h2>
+                <div class="section-content">
+                    <p>В настоящей Политике конфиденциальности используются следующие основные понятия:</p>
+                    <ul>
+                        <li><strong>Персональные данные</strong> - любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу;</li>
+                        <li><strong>Обработка персональных данных</strong> - любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными;</li>
+                        <li><strong>Конфиденциальность персональных данных</strong> - обязательное для соблюдения Оператором требование не допускать их распространения без согласия субъекта персональных данных;</li>
+                        <li><strong>Субъект персональных данных</strong> - физическое лицо, которое прямо или косвенно определено или определяемо с помощью персональных данных;</li>
+                        <li><strong>Cookies</strong> - небольшие файлы, которые сохраняются на устройстве пользователя и содержат данные, связанные с веб-сайтом.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">3. КАКИЕ ДАННЫЕ МЫ СОБИРАЕМ</h2>
+                <div class="section-content">
+                    <p>Мы можем собирать следующие виды персональных данных:</p>
+                    <ul>
+                        <li><strong>Контактная информация:</strong> имя, фамилия, адрес электронной почты, номер телефона;</li>
+                        <li><strong>Служебная информация:</strong> название компании, должность, род деятельности;</li>
+                        <li><strong>Техническая информация:</strong> IP-адрес, тип браузера, операционная система, данные о местоположении;</li>
+                        <li><strong>Информация об использовании Сайта:</strong> страницы, которые вы посещаете, время посещения, ссылки, по которым вы переходите;</li>
+                        <li><strong>Данные файлов cookie</strong> и аналогичных технологий отслеживания.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">4. ЦЕЛИ СБОРА ПЕРСОНАЛЬНЫХ ДАННЫХ</h2>
+                <div class="section-content">
+                    <p>Обработка персональных данных осуществляется в следующих целях:</p>
+                    <ul>
+                        <li>Оказание услуг и выполнение обязательств по договорам;</li>
+                        <li>Обработка запросов и обращений пользователей;</li>
+                        <li>Информирование о новых услугах и акциях;</li>
+                        <li>Улучшение качества работы Сайта и предоставляемых услуг;</li>
+                        <li>Проведение статистических и иных исследований;</li>
+                        <li>Выполнение требований законодательства Российской Федерации.</li>
+                    </ul>
+                    <div class="highlight">
+                        ВАЖНО: Мы не передаем ваши персональные данные третьим лицам без вашего согласия, за исключением случаев, предусмотренных законодательством РФ.
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">5. ПРАВА СУБЪЕКТА ПЕРСОНАЛЬНЫХ ДАННЫХ</h2>
+                <div class="section-content">
+                    <p>Вы имеете право:</p>
+                    <ul>
+                        <li>На доступ к своим персональным данным;</li>
+                        <li>На уточнение (обновление, изменение) своих персональных данных;</li>
+                        <li>На блокирование или уничтожение своих персональных данных, если они являются неполными, устаревшими, неточными;</li>
+                        <li>На отзыв согласия на обработку персональных данных;</li>
+                        <li>На обжалование действий или бездействия Оператора в уполномоченный орган по защите прав субъектов персональных данных.</li>
+                    </ul>
+                    <p>Для реализации своих прав вы можете направить соответствующий запрос по адресу электронной почты: info@moscontent.ru</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">6. ИСПОЛЬЗОВАНИЕ ФАЙЛОВ COOKIE</h2>
+                <div class="section-content">
+                    <p>Сайт использует файлы cookie для:</p>
+                    <ul>
+                        <li>Обеспечения корректной работы функций Сайта;</li>
+                        <li>Сбора статистической информации о посещаемости;</li>
+                        <li>Анализа поведения пользователей на Сайте;</li>
+                        <li>Персонализации контента и рекламных объявлений.</li>
+                    </ul>
+                    <p>Вы можете отключить использование файлов cookie в настройках своего браузера, однако это может повлиять на функциональность Сайта.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">7. ЗАЩИТА ПЕРСОНАЛЬНЫХ ДАННЫХ</h2>
+                <div class="section-content">
+                    <p>Мы принимаем необходимые и достаточные организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий третьих лиц.</p>
+                    <p>Меры защиты включают в себя:</p>
+                    <ul>
+                        <li>Регулярное обновление программного обеспечения;</li>
+                        <li>Использование антивирусных средств защиты;</li>
+                        <li>Ограничение доступа к персональным данным;</li>
+                        <li>Регулярное резервное копирование данных;</li>
+                        <li>Обучение сотрудников правилам работы с персональными данными.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">8. ПЕРЕДАЧА ПЕРСОНАЛЬНЫХ ДАННЫХ ТРЕТЬИМ ЛИЦАМ</h2>
+                <div class="section-content">
+                    <p>Мы не продаем, не обмениваем и не передаем персональные данные третьим лицам без вашего согласия, за исключением следующих случаев:</p>
+                    <ul>
+                        <li>По требованию уполномоченных государственных органов в случаях, предусмотренных законодательством РФ;</li>
+                        <li>Партнерам, которые оказывают услуги от нашего имени (при условии заключения соответствующих договоров);</li>
+                        <li>В рамках корпоративных сделок (слияние, поглощение, продажа активов);</li>
+                        <li>Для защиты прав и безопасности Оператора, наших пользователей или общественности.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">9. ХРАНЕНИЕ ПЕРСОНАЛЬНЫХ ДАННЫХ</h2>
+                <div class="section-content">
+                    <p>Персональные данные хранятся в течение срока, необходимого для достижения целей их обработки, если иной срок хранения не установлен законодательством РФ.</p>
+                    <p>После достижения целей обработки или истечения сроков хранения персональные данные подлежат уничтожению или обезличиванию.</p>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">10. ИЗМЕНЕНИЕ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ</h2>
+                <div class="section-content">
+                    <p>Мы оставляем за собой право вносить изменения в настоящую Политику конфиденциальности. При внесении изменений в актуальной редакции указывается дата последнего обновления.</p>
+                    <p>Новая редакция Политики вступает в силу с момента ее размещения на Сайте, если иное не предусмотрено новой редакцией Политики.</p>
+                    <p>Рекомендуем регулярно проверять данную страницу для ознакомления с любыми изменениями.</p>
+                </div>
+            </div>
+
+            <div class="contact-block">
+                <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
+                <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться:</p>
+                <p><strong>Электронная почта:</strong> info@moscontent.ru</p>
+                <p><strong>Телефон:</strong> +7 (499) 123-45-67</p>
+                <p><strong>Почтовый адрес:</strong> г. Москва</p>
+                <p><strong>ИП Гузь Илона Артуровна</strong><br>
+                ИНН: 027320062837<br>
+                ОГРНИП: 322027300062837</p>
+            </div>
+
+            <div class="back-to-main">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> Вернуться на главную
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@moscontent.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+7 (499) 123-45-67</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>г. Москва</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Реквизиты</h3>
+                    <div class="requisites">
+                        <p><strong>ИП Гузь Илона Артуровна</strong></p>
+                        <p>ИНН: 027320062837</p>
+                        <p>ОГРНИП: 322027300062837</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="index.html" style="color: var(--white); text-decoration: none;">Главная</a></li>
+                        <li><a href="privacy-policy.html" style="color: var(--yellow); text-decoration: none;">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 МОСКОНТЕНТ. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add current year to copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.querySelector('.footer-bottom p');
+            if (yearElement) {
+                yearElement.innerHTML = yearElement.innerHTML.replace('2023', new Date().getFullYear());
+            }
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
