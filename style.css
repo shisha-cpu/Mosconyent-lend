@@ -7,17 +7,19 @@
         }
 
         :root {
-            --black: #000000;
+            --primary: #4a6bff;
+            --secondary: #ff9d4a;
+            --accent: #6b4aff;
+            --light: #f5f7ff;
+            --dark: #2a2a3c;
             --white: #ffffff;
-            --red: #ff2e2e;
-            --yellow: #ffd900;
-            --gray: #2a2a2a;
-            --light-gray: #444444;
+            --gray: #e0e5ff;
+            --light-gray: #f0f2ff;
         }
 
         body {
-            background: var(--black);
-            color: var(--white);
+            background: var(--light);
+            color: var(--dark);
             line-height: 1.4;
             overflow-x: hidden;
         }
@@ -31,30 +33,31 @@
 
         /* Brutalism styles */
         .brutal-border {
-            border: 3px solid var(--white);
-            box-shadow: 8px 8px 0px var(--red);
+            border: 3px solid var(--dark);
+            box-shadow: 8px 8px 0px var(--primary);
         }
 
         .brutal-card {
-            background: var(--gray);
-            border: 3px solid var(--white);
+            background: var(--white);
+            border: 3px solid var(--dark);
             position: relative;
             transition: all 0.3s ease;
         }
 
         .brutal-card:hover {
             transform: translate(-5px, -5px);
-            box-shadow: 15px 15px 0px var(--yellow);
+            box-shadow: 15px 15px 0px var(--secondary);
         }
 
         /* Header */
         header {
             padding: 15px 0;
-            background: var(--black);
-            border-bottom: 3px solid var(--white);
+            background: var(--white);
+            border-bottom: 3px solid var(--dark);
             position: fixed;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
         .header-inner {
@@ -67,13 +70,13 @@
             font-size: 32px;
             font-weight: 900;
             text-transform: uppercase;
-            color: var(--red);
+            color: var(--primary);
             letter-spacing: 3px;
         }
 
         .logo-sub {
             font-size: 10px;
-            color: var(--white);
+            color: var(--dark);
             display: block;
             letter-spacing: 8px;
             margin-top: -5px;
@@ -86,7 +89,7 @@
         }
 
         nav a {
-            color: var(--white);
+            color: var(--dark);
             text-decoration: none;
             font-weight: 700;
             text-transform: uppercase;
@@ -94,11 +97,12 @@
             letter-spacing: 1px;
             padding: 8px 15px;
             background: var(--gray);
-            border: 2px solid var(--white);
+            border: 2px solid var(--dark);
         }
 
         nav a:hover {
-            background: var(--red);
+            background: var(--primary);
+            color: var(--white);
             transform: skew(-10deg);
         }
 
@@ -109,9 +113,9 @@
             align-items: center;
             padding: 120px 0 80px;
             background: 
-                radial-gradient(circle at 20% 80%, var(--red) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--yellow) 0%, transparent 50%),
-                var(--black);
+                radial-gradient(circle at 20% 80%, var(--primary) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--secondary) 0%, transparent 50%),
+                var(--light);
         }
 
         .hero-content {
@@ -124,17 +128,19 @@
             text-transform: uppercase;
             line-height: 1;
             margin-bottom: 30px;
-            text-shadow: 5px 5px 0px var(--red);
+            text-shadow: 5px 5px 0px var(--primary);
+            color: var(--dark);
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 40px;
-            background: var(--gray);
+            background: var(--white);
             padding: 15px;
-            border: 3px solid var(--white);
+            border: 3px solid var(--dark);
             display: inline-block;
             transform: rotate(-1deg);
+            color: var(--dark);
         }
 
         .cta-buttons {
@@ -151,27 +157,27 @@
             letter-spacing: 2px;
             font-size: 14px;
             transition: all 0.3s ease;
-            border: 3px solid var(--white);
+            border: 3px solid var(--dark);
         }
 
         .btn-primary {
-            background: var(--red);
+            background: var(--primary);
             color: var(--white);
         }
 
         .btn-primary:hover {
-            background: var(--black);
+            background: var(--dark);
             transform: skew(-10deg) scale(1.05);
         }
 
         .btn-secondary {
-            background: var(--black);
-            color: var(--white);
+            background: var(--white);
+            color: var(--dark);
         }
 
         .btn-secondary:hover {
-            background: var(--yellow);
-            color: var(--black);
+            background: var(--secondary);
+            color: var(--dark);
             transform: skew(10deg) scale(1.05);
         }
 
@@ -179,8 +185,8 @@
         .services {
             padding: 100px 0;
             background: var(--light-gray);
-            border-top: 5px solid var(--yellow);
-            border-bottom: 5px solid var(--red);
+            border-top: 5px solid var(--secondary);
+            border-bottom: 5px solid var(--primary);
         }
 
         .section-title {
@@ -192,17 +198,18 @@
             font-size: 3rem;
             text-transform: uppercase;
             margin-bottom: 10px;
-            color: var(--yellow);
-            text-shadow: 3px 3px 0px var(--red);
+            color: var(--primary);
+            text-shadow: 3px 3px 0px var(--secondary);
         }
 
         .section-title p {
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
-            background: var(--black);
+            background: var(--white);
             padding: 10px;
-            border: 2px solid var(--white);
+            border: 2px solid var(--dark);
+            color: var(--dark);
         }
 
         .services-grid {
@@ -221,7 +228,7 @@
         .service-number {
             font-size: 4rem;
             font-weight: 900;
-            color: var(--red);
+            color: var(--primary);
             margin-bottom: 20px;
         }
 
@@ -229,17 +236,18 @@
             font-size: 1.8rem;
             margin-bottom: 20px;
             text-transform: uppercase;
-            color: var(--yellow);
+            color: var(--dark);
         }
 
         .service-card p {
             flex-grow: 1;
+            color: var(--dark);
         }
 
         /* Why Us Section */
         .why-us {
             padding: 100px 0;
-            background: var(--black);
+            background: var(--white);
         }
 
         .advantages-grid {
@@ -251,22 +259,26 @@
 
         .advantage-card {
             padding: 30px;
-            background: var(--gray);
-            border-left: 5px solid var(--red);
+            background: var(--light);
+            border-left: 5px solid var(--primary);
         }
 
         .advantage-card h4 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--yellow);
+            color: var(--primary);
+        }
+
+        .advantage-card p {
+            color: var(--dark);
         }
 
         /* Platforms Section */
         .platforms {
             padding: 100px 0;
             background: var(--light-gray);
-            border-top: 5px solid var(--red);
-            border-bottom: 5px solid var(--yellow);
+            border-top: 5px solid var(--primary);
+            border-bottom: 5px solid var(--secondary);
         }
 
         .platforms-grid {
@@ -279,20 +291,28 @@
         .platform-card {
             padding: 30px;
             text-align: center;
-            background: var(--gray);
-            border: 2px solid var(--white);
+            background: var(--white);
+            border: 2px solid var(--dark);
         }
 
         .platform-icon {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: var(--yellow);
+            color: var(--primary);
+        }
+
+        .platform-card h4 {
+            color: var(--dark);
+        }
+
+        .platform-card p {
+            color: var(--dark);
         }
 
         /* Process */
         .process {
             padding: 100px 0;
-            background: var(--black);
+            background: var(--white);
         }
 
         .process-steps {
@@ -309,7 +329,7 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: var(--red);
+            background: var(--primary);
             z-index: 1;
         }
 
@@ -323,8 +343,8 @@
         .step-number {
             width: 60px;
             height: 60px;
-            background: var(--black);
-            border: 3px solid var(--yellow);
+            background: var(--white);
+            border: 3px solid var(--secondary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -332,7 +352,7 @@
             font-size: 24px;
             font-weight: 900;
             margin: 0 auto 20px;
-            color: var(--yellow);
+            color: var(--secondary);
         }
 
         .step-title {
@@ -340,7 +360,11 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 10px;
-            color: var(--red);
+            color: var(--primary);
+        }
+
+        .process-step p {
+            color: var(--dark);
         }
 
         /* Results Section */
@@ -359,23 +383,27 @@
         .result-card {
             text-align: center;
             padding: 30px;
-            background: var(--black);
-            border: 3px solid var(--yellow);
+            background: var(--white);
+            border: 3px solid var(--secondary);
         }
 
         .result-number {
             font-size: 3rem;
             font-weight: 900;
-            color: var(--red);
+            color: var(--primary);
             margin-bottom: 10px;
+        }
+
+        .result-card div {
+            color: var(--dark);
         }
 
         /* Cases Section */
         .cases {
             padding: 100px 0;
-            background: var(--black);
-            border-top: 5px solid var(--yellow);
-            border-bottom: 5px solid var(--red);
+            background: var(--white);
+            border-top: 5px solid var(--secondary);
+            border-bottom: 5px solid var(--primary);
         }
 
         .cases-grid {
@@ -387,59 +415,29 @@
 
         .case-card {
             padding: 30px;
-            background: var(--gray);
-            border: 3px solid var(--white);
+            background: var(--light);
+            border: 3px solid var(--dark);
             text-align: center;
             transition: all 0.3s ease;
         }
 
         .case-card:hover {
             transform: translateY(-5px);
-            border-color: var(--yellow);
+            border-color: var(--secondary);
         }
 
         .case-card h4 {
             font-size: 1.4rem;
             margin-bottom: 15px;
-            color: var(--yellow);
+            color: var(--primary);
             text-transform: uppercase;
             font-weight: 900;
         }
 
         .case-card p {
             font-size: 1rem;
-            color: var(--white);
+            color: var(--dark);
             line-height: 1.5;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background: var(--red);
-            border-top: 5px solid var(--yellow);
-            border-bottom: 5px solid var(--white);
-        }
-
-        .cta-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .cta-title {
-            font-size: 3.5rem;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            text-shadow: 4px 4px 0px var(--black);
-        }
-
-        .cta-text {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            background: var(--black);
-            padding: 20px;
-            border: 3px solid var(--white);
-            transform: rotate(1deg);
         }
 
         /* FAQ Section */
@@ -455,10 +453,11 @@
 
         .faq-question {
             padding: 20px;
-            background: var(--gray);
+            background: var(--white);
             cursor: pointer;
             font-weight: 700;
-            color: var(--yellow);
+            color: var(--primary);
+            border: 2px solid var(--dark);
         }
 
         .faq-answer {
@@ -466,18 +465,57 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
+            background: var(--light);
         }
 
         .faq-item.active .faq-answer {
             padding: 20px;
             max-height: 500px;
+            border: 2px solid var(--dark);
+            border-top: none;
+        }
+
+        .faq-answer p {
+            color: var(--dark);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: var(--primary);
+            border-top: 5px solid var(--secondary);
+            border-bottom: 5px solid var(--dark);
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 4px 4px 0px var(--dark);
+            color: var(--white);
+        }
+
+        .cta-text {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            background: var(--white);
+            padding: 20px;
+            border: 3px solid var(--dark);
+            transform: rotate(1deg);
+            color: var(--dark);
         }
 
         /* Footer */
         footer {
-            background: var(--gray);
+            background: var(--light);
             padding: 60px 0 20px;
-            border-top: 5px solid var(--yellow);
+            border-top: 5px solid var(--secondary);
         }
 
         .footer-content {
@@ -490,9 +528,9 @@
         .footer-section h3 {
             font-size: 1.5rem;
             margin-bottom: 20px;
-            color: var(--yellow);
+            color: var(--primary);
             text-transform: uppercase;
-            border-bottom: 2px solid var(--red);
+            border-bottom: 2px solid var(--primary);
             padding-bottom: 10px;
             display: inline-block;
         }
@@ -508,15 +546,17 @@
             align-items: center;
             gap: 10px;
             padding: 8px 0;
-            border-bottom: 1px dashed var(--light-gray);
+            border-bottom: 1px dashed var(--gray);
+            color: var(--dark);
         }
 
         .requisites {
             font-size: 0.9rem;
             line-height: 1.6;
-            background: var(--black);
+            background: var(--white);
             padding: 20px;
-            border: 2px solid var(--white);
+            border: 2px solid var(--dark);
+            color: var(--dark);
         }
 
         .social-links {
@@ -531,28 +571,30 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: var(--black);
-            color: var(--white);
+            background: var(--white);
+            color: var(--dark);
             text-decoration: none;
-            border: 2px solid var(--white);
+            border: 2px solid var(--dark);
             transition: all 0.3s ease;
             font-size: 1.2rem;
         }
 
         .social-link:hover {
-            background: var(--red);
+            background: var(--primary);
+            color: var(--white);
             transform: rotate(45deg) scale(1.1);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 30px;
-            border-top: 3px solid var(--red);
+            border-top: 3px solid var(--primary);
             font-size: 0.9rem;
+            color: var(--dark);
         }
 
         .footer-bottom a {
-            color: var(--yellow);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 700;
         }
@@ -629,4 +671,3 @@
                 font-size: 2rem;
             }
         }
-  

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МОСКОНТЕНТ | SMM АГЕНТСТВО</title>
+    <title>SMM BOOST | SMM АГЕНТСТВО</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
@@ -13,7 +13,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="logo">
-                    Москонтент
+                    SMM BOOST
                     <span class="logo-sub">SMM Agency</span>
                 </div>
                 <nav>
@@ -39,7 +39,7 @@
                     <a href="https://wa.me/79991234567" class="btn btn-primary">
                         <i class="fab fa-whatsapp"></i> Жёсткий расчёт
                     </a>
-                    <a href="https://t.me/moscontent" class="btn btn-secondary">
+                    <a href="https://t.me/smmboost" class="btn btn-secondary">
                         <i class="fab fa-telegram"></i> Безопасный выстрел
                     </a>
                 </div>
@@ -322,7 +322,6 @@
                 <div class="footer-section">
                     <h3>Контакты</h3>
                     <div class="contact-info">
-                   
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <span>+7 (499) 123-45-67</span>
@@ -340,22 +339,29 @@
                 <div class="footer-section">
                     <h3>Реквизиты</h3>
                     <div class="requisites">
-                        <p><strong>ИП Гузь Илона Артуровна</strong></p>
-                        <p>ИНН: 027320062837</p>
-                        <p>ОГРНИП: 322027300062837</p>
+                        <p><strong>ИП Бородин Никита Сергеевич</strong></p>
+                        <p>ИНН: 332760903109</p>
+                        <p>ОГРН: 314332726700062</p>
                         <p>Расчётный счёт: 40802810100000000000</p>
                         <p>Банк: Тинькофф Банк</p>
                         <p>БИК: 044525974</p>
                     </div>
                 </div>
-    
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 МОСКОНТЕНТ. ВСЕ ПРАВА ЗАЩИЩЕНЫ. | <a href="privacy-policy.html">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></p>
+                <p>&copy; 2025 SMM BOOST. ВСЕ ПРАВА ЗАЩИЩЕНЫ. | <a href="privacy-policy.html">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></p>
             </div>
         </div>
     </footer>
 
-   <script src="./script.js"></script>
+    <script>
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
